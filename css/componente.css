@@ -1,0 +1,414 @@
+/* Estilos base */
+:root {
+    --color-primario: #4285f4;
+    --color-secundario: #34a853;
+    --color-texto: #333;
+    --color-fondo: #f9f9f9;
+    --color-tarjeta: #fff;
+    --color-borde: #e0e0e0;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+    --color-enlace: #1a73e8;
+    --color-subtitulo: #666;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    --color-primario: #8ab4f8;
+    --color-secundario: #81c995;
+    --color-texto: #e8eaed;
+    --color-fondo: #121212;
+    --color-tarjeta: #1e1e1e;
+    --color-borde: #3c4043;
+    --color-sombra: rgba(0, 0, 0, 0.3);
+    --color-enlace: #8ab4f8;
+    --color-subtitulo: #9aa0a6;
+}
+
+/* Header */
+.header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-weight: 300;
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+/* Layout principal */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.switch-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: move;
+    user-select: none;
+}
+
+.interruptor {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    background-color: #ccc;
+    border-radius: 34px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.4s;
+}
+
+.icono-circulo {
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
+    pointer-events: none;
+}
+
+.switch-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: move;
+  user-select: none;
+}
+
+.interruptor {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.interruptor input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  background-color: #ccc;
+  border-radius: 34px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.4s;
+}
+
+.icono-circulo {
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+
+.icono-circulo svg {
+  width: 14px;
+  height: 14px;
+}
+
+.interruptor input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+.interruptor input:checked + .slider .icono-circulo {
+  transform: translateX(22px);
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.icono-circulo svg {
+    width: 14px;
+    height: 14px;
+}
+
+.interruptor input:checked+.slider {
+    background-color: #4CAF50;
+}
+
+.interruptor input:checked+.slider .icono-circulo {
+    transform: translateX(22px);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content-section {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Tarjetas de artículo */
+.article-card {
+    background-color: var(--color-tarjeta);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px var(--color-sombra);
+    border: 1px solid var(--color-borde);
+}
+
+.article-card h3 {
+    color: var(--color-primario);
+    margin-top: 0;
+}
+
+/* Ejemplos de código */
+.code-example {
+    background-color: var(--color-fondo);
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border: 1px solid var(--color-borde);
+}
+
+.code-example pre {
+    margin: 0;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--color-texto);
+}
+
+/* Grid de características */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.feature {
+    background-color: var(--color-tarjeta);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-borde);
+}
+
+.feature h4 {
+    margin-top: 0;
+    color: var(--color-secundario);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--color-tarjeta);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+    box-shadow: 0 2px 4px var(--color-sombra);
+    border: 1px solid var(--color-borde);
+}
+
+.resources-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-list li {
+    margin-bottom: 0.5rem;
+}
+
+.resources-list a {
+    color: var(--color-enlace);
+    text-decoration: none;
+}
+
+.resources-list a:hover {
+    text-decoration: underline;
+}
+
+/* Newsletter */
+.newsletter {
+    margin-top: 2rem;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.newsletter button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.newsletter button:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor flotante y movible */
+.contenedor-boton-flotante {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: move;
+    user-select: none;
+}
+
+/* Switch */
+.interruptor {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    background-color: #ccc;
+    border-radius: 34px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.4s;
+}
+
+/* El círculo blanco con SVG */
+.icono-circulo {
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
+    pointer-events: none;
+}
+
+.icono-circulo svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Estado activado */
+input:checked+.slider {
+    background-color: #4CAF50;
+}
+
+input:checked+.slider .icono-circulo {
+    transform: translateX(22px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+}

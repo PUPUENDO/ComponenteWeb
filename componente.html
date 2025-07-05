@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente de Modo Oscuro/Claro</title>
+    <link rel="stylesheet" href="css/componente.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Desarrollo Web Moderno</h1>
+        <p class="subtitle">Explorando las mejores prácticas en diseño y desarrollo</p>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Fundamentos del Desarrollo Web</h2>
+            <article class="article-card">
+                <h3>HTML5 Semántico</h3>
+                <p>El HTML semántico es la base de cualquier sitio web moderno. Utiliza etiquetas como &lt;header&gt;,
+                    &lt;footer&gt;, &lt;article&gt; y &lt;section&gt; para dar significado a la estructura del
+                    contenido.</p>
+                <div class="code-example">
+                    <pre><code>&lt;header&gt;
+    &lt;h1&gt;Título Principal&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <h3>CSS3 y Diseño Responsivo</h3>
+                <p>CSS3 introduce características avanzadas como Flexbox, Grid, animaciones y media queries que permiten
+                    crear diseños adaptables a cualquier dispositivo.</p>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h4>Flexbox</h4>
+                        <p>Sistema de diseño unidimensional para distribuir espacio entre items</p>
+                    </div>
+                    <div class="feature">
+                        <h4>CSS Grid</h4>
+                        <p>Sistema de diseño bidimensional para layouts complejos</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Media Queries</h4>
+                        <p>Adaptar estilos según características del dispositivo</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <h3>JavaScript Moderno</h3>
+                <p>JavaScript ha evolucionado enormemente con ES6+, introduciendo clases, módulos, arrow functions,
+                    async/await y más.</p>
+                <div class="code-example">
+                    <pre><code>// Arrow function y template literals
+const saludar = (nombre) => {
+    return `Hola, ${nombre}!`;
+};
+
+// Async/await para manejo de promesas
+async function obtenerDatos() {
+    try {
+        const respuesta = await fetch('api/datos');
+        const datos = await respuesta.json();
+        console.log(datos);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}</code></pre>
+                </div>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Recursos Útiles</h3>
+            <ul class="resources-list">
+                <li><a href="#">Documentación MDN Web</a></li>
+                <li><a href="#">CSS-Tricks</a></li>
+                <li><a href="#">Dev.to Comunidad</a></li>
+                <li><a href="#">Stack Overflow</a></li>
+                <li><a href="#">GitHub Learning Lab</a></li>
+            </ul>
+
+            <div class="newsletter">
+                <h4>Suscríbete a nuestro boletín</h4>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 Desarrollo Web Moderno - Todos los derechos reservados</p>
+        <div class="footer-links">
+            <a href="#">Términos de servicio</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <!-- Componente de modo oscuro/claro -->
+    <!-- Interruptor de modo oscuro plug-and-play -->
+    <div id="switch-tema" class="switch-container">
+        <label class="interruptor">
+            <input type="checkbox" />
+            <span class="slider">
+                <span class="icono-circulo"></span>
+            </span>
+        </label>
+    </div>
+
+    <script src="js/componente.js"></script>
+</body>
+
+</html>
