@@ -2,9 +2,14 @@
 
 Esta librería proporciona un **interruptor personalizable** para cambiar entre **modo claro y modo oscuro**, con un diseño moderno basado en SVG, estilo `switch` y **posicionamiento flotante y arrastrable en pantalla**.
 
+## ¿QUÉ HACE ESTE COMPONENTE?
+- Detecta si el usuario prefiere modo oscuro (mediante `prefers-color-scheme`).  
+- Aplica dinámicamente una clase al `<body>` para cambiar los estilos CSS.  
+- Cambia automáticamente el ícono del interruptor (🌞/🌙).  
+- Guarda la preferencia en `localStorage` para persistencia.  
+- **Interruptor arrastrable**: ¡Posiciónalo donde quieras en la pantalla!  
 ---
-## 🔗 Video del componente
-https://drive.google.com/drive/folders/1yfmyKhv9rESQkcUXh3msoPIc-DJSXL7e?usp=sharing
+📹 **Video demostrativo**: [Ver en Drive](https://drive.google.com/file/d/141aWUZQ1BLxvWrHA-2AJr0bO62pg1KUR/view?usp=sharing)  
 
 ## Instalación
 Puedes integrarla fácilmente en tu proyecto HTML de la siguiente forma:
@@ -12,8 +17,8 @@ Puedes integrarla fácilmente en tu proyecto HTML de la siguiente forma:
 ### Descarga e incluye manualmente
 Guarda los siguientes archivos en tu proyecto:
 
-- `css/componente.css`
-- `js/componente.js`
+ - [`css/componente.css`](./css/componente.css)  
+- [`js/componente.js`](./js/componente.js)  
 
 Luego, inclúyelos así:
 
