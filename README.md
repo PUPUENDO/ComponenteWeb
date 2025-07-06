@@ -87,5 +87,9 @@ crearInterruptor('#switch-tema', {
   }
 });
 ```
-
-
+## Página en modo oscuro
+![Página en modo oscuro](img/oscuro.png)
+## Página en modo claro
+![Página en modo claro](img/claro.png)
+## Componente flotante por toda la página
+![Componente flotante por toda la página](img/flotante.png)
